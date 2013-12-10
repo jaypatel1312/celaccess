@@ -1,0 +1,280 @@
+*{	
+	padding:0;
+	margin:0;
+}
+body,html{
+	height:100%;
+	width:100%;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+#scheduler{
+	width:600px;
+	margin:50px auto;
+	padding:10px;
+	height:170px;
+	position:relative;
+}
+.head{
+	float:left;	
+	width:600px;
+}
+.midnight{
+	float:left;
+	color:#000;	
+	width:240px;
+	font-size:11px;
+}
+.noon{
+	float:left;	
+	olor:#000;	
+	width:230px;
+	font-size:11px;
+}
+.midnightR{
+	float:left;
+	width:55px;
+	font-size:11px;
+}
+.scheduler_body{
+	float:left;
+	width:590px;
+	margin:10px 0 0 0;	
+}
+.hourTable{
+	width:500px;
+	margin:0 0 0 60px;	
+}
+.hourTable tr td{
+	width:20px !important;
+	border-left:1px solid #fff;
+	text-align:center;
+	font-size:11px;
+}
+.week{
+	width:70px;
+	float:left;	
+}
+.week tr{
+	height:15px;
+	width:70px !important;
+}
+.week tr td{
+	height:15px !important;
+	width:70px !important;
+	border-bottom:1px solid #fff;
+	font-size:11px;
+}
+.timeTable{
+	width:483px;
+	float:left;
+}
+.timeTable tr:first-child td{
+	border-top:1px solid #666;
+}
+.timeTable tr td:last-child{
+	border-right:1px solid #666;
+}
+.timeTable tr td{
+	width:19px;
+	height:15px;
+	cursor:pointer;
+	border-bottom:1px solid #666;
+	border-left:1px solid #666;
+	background:#EEEEEE;
+	text-align:center;
+	position:relative;
+	float:left;
+	font-size:11px;
+}
+.timeTable tr.weekend td{
+	background:#dede5f;
+}
+.weekendName{
+	color:#00ff00;	
+}
+.bgPopup{
+	z-index:98;
+	background:rgba(0,0,0,0);
+	position:absolute;
+	height:100%;
+	width:100%;
+	display:none;
+}
+.popup{
+	position:absolute;
+	z-index:99;
+	top:50%;
+	left:50%;
+	margin-left:-178px;
+	margin-top:-40px;
+	height:80px;
+	width:356px;
+	display:none;
+	border-radius:5px;
+	background:#fff;
+	box-shadow:0 4px 30px #000;
+	border:1px solid #333;		
+}
+.closeBtn{
+	position:absolute;
+	background:#333;
+	color:#fff;
+	font-family:Tahoma, Geneva, sans-serif;
+	right:3px;
+	top:3px;	
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	text-align:center;
+	font-size:14px;
+	cursor:pointer;
+}
+.row1{
+	float:left;
+	width:95%;
+	margin:10px 0 0 1%;
+	position:relative;
+	height:25px;
+}
+.row2{
+	float:left;
+	width:95%;
+	margin:5px 0 0 5%;
+	position:relative;
+}
+.slot{
+	background:#cccccc;
+	border-radius:5px;
+	color:#333;
+	font-size:14px;
+	font-weight:bold;
+	float:left;
+	margin:5px 0 0 10px;
+	width:auto;
+	padding:2px 6px;
+	cursor:pointer;
+	position:absolute;
+}
+.slot span.currentPick{
+	font-size:11px;
+	font-weight:normal;
+	float:left;
+	margin:1px 0 0 0;
+}
+.slot:hover{
+	background:#999;
+}
+.delete{
+	background:#900;
+	color:#FFF;
+	font-size:14px;
+	text-align:center;
+	position:absolute;
+	top:25px;
+	width:125px;
+	left:-40px;
+	z-index:2;
+	border-radius:5px;	
+}
+.delete span {
+	color:#FFF;
+	font-size:11px;
+	text-align:center;	
+}
+.delete:after { 
+	bottom: 100%; 
+	border: solid transparent; 
+	content: " "; 
+	height: 0; 
+	width: 0; 
+	position: absolute; 
+	pointer-events: none;  
+	border-color: rgba(136, 183, 213, 0); 
+	border-bottom-color: #990000; 
+	border-width: 6px; 
+	left: 50%; 
+	margin-left: -6px; 
+}
+.closeBox{
+	position:absolute;
+	right:5px;
+	top:1px;	
+	color:#FFF;
+}
+.open{
+	background : #00ff00;
+	color : #fff;	
+}
+.close{
+	background: #CCCCCC;
+	color:#333333;	
+}
+
+.gateOpTime{
+	background:#900;
+	color:#FFF;
+	font-size:14px;
+	text-align:center;
+	position:absolute;
+	bottom:22px;
+	min-width:100px;
+	left:-40px;
+	z-index:2;
+	border-radius:3px;	
+	white-space:wrap;
+	height:auto;	
+	font-size:10px;
+	min-height:20px;
+	line-height:18px;
+}
+.gateOpTime:after { 
+	top: 100%; 
+	border: solid transparent; 
+	content: " "; 
+	height: 0; 
+	width: 0; 
+	position: absolute; 
+	pointer-events: none; 
+	border-color: rgba(153, 0, 0, 0); 
+	border-top-color: #990000; 
+	border-width: 6px; 
+	left: 50%; 
+	margin-left: -6px;
+}
+.s0{
+	left:0;	
+}
+.s10{
+	left:50px;	
+}
+.s20{
+	left:100px;	
+}
+.s30{
+	left:150px;	
+}
+.s40{
+	left:200px;	
+}
+.s50{
+	left:250px;	
+}
+.s5{
+	left:10px;	
+}
+.s15{
+	left:60px;	
+}
+.s25{
+	left:110px;
+}
+.s35{
+	left:160px;	
+}
+.s45{
+	left:210px;	
+}
+.s55{
+	left:260px;	
+}
